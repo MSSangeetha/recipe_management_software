@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragments :: head"></head>
+<body class="container text-center homeCenter"  style="background-image: url('food_image.jpg');display: flex;justify-content: center;">
+
+<!--add a header-->
+<div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 500px">
+<h1 class="text-center  text-danger">Recipe Management Software </h1>
+<!--<header th:replace="fragments :: header"></header>-->
+<div class="text-center lead  text-danger">
+Login
+</div>
+<form method="post">
+    <div class="form-group text-danger" >
+        <label th:for="username">Username
+            <input class="form-control" th:field="${loginFormDTO.username}">
+        </label>
+        <p class="error" th:errors="${loginFormDTO.username}"></p>
+    </div>
+    <div class="form-group  text-danger">
+        <label>Password
+            <input class="form-control" th:field="${loginFormDTO.password}" type="password">
+        </label>
+        <p class="error" th:errors="${loginFormDTO.password}"></p>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Log In" />
+</form>
+
+    <div class="text-danger">
+<p>Don't have an account? <a href="/register">Register for one.</a></p>
+</div>
+
+</div>
+</body>
+
+<!--add a footer-->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragments :: head"></head>
+<body class="container homeCenter" style="background-image: url('food_image.jpg');display: flex;justify-content: center;">
+<!--<body class="container">-->
+<!--add a header-->
+<!--<div class="mainPageLogo"><img src = "food_image.jpg"/> </div>-->
+<div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 500px">
+    <h1 class="text-center text-danger">Recipe Management Software </h1>
+    <h2 class="text-center text-danger">A one stop for all your favorite recipes.</h2>
+    <!--include an image as background-->
+<!--    <div class="row" style="padding-top:150px;">-->
+<!--        <p class="lead col-xs-6 text-danger text-center">Hello </p> <p th:text="${username}">,</p>-->
+<!--    <p class="text-danger text-center">Hello </p> <p class="text-danger text-center" th:text="${username}">,</p>-->
+
+<!--    <span class="text-danger">Dear</span>-->
+<!--    <p class="text-danger" th:text="${loginFormDTO.username}">,</p>-->
+    <p class="text-danger" th:text="${newusername}">,</p>
+
+    <p class="text-danger text-center">Welcome to our Recipe Management Homepage.Here are the options, </p>
+    <div class="row" style="padding-top:50px;">
+    <p><a class="nav-link  lead col-xs-6 text-danger text-center" href="/recipe/">View</a></p>
+     <p><a class="nav-link lead col-xs-6 text-danger text-center" href="/recipe/create/">Add a Recipe</a></p>
+        </div>
+<!--          <a class="nav-link lead col-xs-6 text-danger text-center" href="/recipe/delete/">Delete a Recipe</a><br>-->
+    <div class="row" style="padding-top:50px;">
+        <p><a class="nav-link lead col-xs-6 text-danger text-center" href="/recipeCategories/">View My Recipe Categories</a></p>
+        <p><a class="nav-link lead col-xs-6 text-danger text-center" href="/recipeCategories/create/">Create a Recipe Category</a></p>
+    </div>
+<!--                <li class="nav-item"><a class="nav-link" href="/tags/">All Tags</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="/tags/create">Create Tag</a></li>-->
+
+
+<!--    </div>-->
+
+</div>
+<!--add a footer-->
+
+
+</body>
+<!--<footer th:replace="fragments :: footer"></footer>-->
+</html>
+

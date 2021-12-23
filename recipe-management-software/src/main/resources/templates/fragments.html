@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title>Recipe Management Software</title>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+<!--    google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+<nav th:fragment="footer">
+<!--    <h1 th:text="${title}">Recipe Management Software</h1>-->
+<!--    <ul class="nav">-->
+<!--    <div class="row">-->
+        <table class="table">
+            <tr>
+                <td><a href="/recipe">View Recipes</a></td>
+                <td><a href="/recipe/create">Create Recipe</a></td>
+                <td><a href="/recipeCategories">View Categories</a></td>
+                <td><a href="/recipeCategories/create">Create Categories</a></td>
+            </tr>
+        </table>
+
+<!--        <li class="nav-item"><a class="nav-link" href="/recipe/delete">Delete Events</a></li>-->
+
+
+<!--        <li class="nav-item"><a class="nav-link" href="/tags/">All Tags</a></li>-->
+<!--        <li class="nav-item"><a class="nav-link" href="/tags/create">Create Tag</a></li>-->
+
+<!--  </div>-->
+</nav>
+
+</body>
+</html>

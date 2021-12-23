@@ -1,0 +1,13 @@
+.mainPageLogo {
+  background-size: contain;
+}
+
+.homeCenter {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Playfair Display', serif;
+
+}
+

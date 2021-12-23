@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container homeCenter" style="background-image: url('food_image.jpg');display: flex;justify-content: center;">
+<!--<body class="container">-->
+<!--add a header-->
+<!--<div class="mainPageLogo"><img src = "food_image.jpg"/> </div>-->
+<div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #000000; height: 500px;position:absolute;">
+    <h1 class="text-center text-danger">Recipe Management Software </h1>
+    <h2 class="text-center text-danger">A one stop for all your favorite recipes.</h2>
+
+    <!--include an image as background-->
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Category Name</th>
+        </tr>
+        </thead>
+        <tr th:each="category : ${categories}">
+            <!--        <td th:text="${category.name}"></td>-->
+            <td><a th:text="${category.name}" th:href="'/recipe?categoryId=' + ${category.id}"></a></td>
+        </tr>
+
+    </table>
+
+</div>
+<!--add a footer-->
+<div style = "position:relative;">
+    <table style = "margin-top:20px;">
+        <tr>
+            <td style="padding-left:20px;"><a href="/recipe">View Recipes</a></td>
+            <td style="padding-left:20px;"><a href="/recipe/create">Create Recipe</a></td>
+            <td style="padding-left:20px;"><a href="/recipeCategories">View Categories</a></td>
+            <td style="padding-left:20px;"><a href="/recipeCategories/create">Create Categories</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

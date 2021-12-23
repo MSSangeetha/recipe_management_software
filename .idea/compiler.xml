@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="recipe-management-software.recipe-management-software.main" target="11" />
+      <module name="recipe-management-software.recipe-management-software.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

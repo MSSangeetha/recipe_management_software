@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container homeCenter" style="background-image: url('../../food_image.jpg');display: flex;justify-content: center;">
+<!--<body class="container">-->
+<!--add a header-->
+<!--<div class="mainPageLogo"><img src = "food_image.jpg"/> </div>-->
+<div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 500px;position:absolute;">
+
+    <form method="post">
+        <div class="form-group" style="margin-top:50px;">
+            <label>Name
+                <input th:field="${recipe.recipeName}" class="form-control">
+            </label>
+            <p class="error" th:errors="${recipe.recipeName}"></p>
+        </div>
+        <div class="form-group">
+<!--            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>-->
+            <label>Instructions</label>
+                <textarea th:field="${recipe.recipeDetails.description}" class="form-control" id="textAreaExample" rows="10"></textarea>
+<!--                <input th:field="${recipe.recipeDetails.description}" class="form-control">-->
+
+            <p class="error" th:errors="${recipe.recipeDetails.description}"></p>
+        </div>
+<!--        <div class="form-group">-->
+<!--            <label>Contact Email-->
+<!--                <input th:field="${recipe.recipeDetails.contactEmail}" class="form-control">-->
+<!--            </label>-->
+<!--            <p class="error" th:errors="${event.eventDetails.contactEmail}"></p>-->
+<!--        </div>-->
+        <div class="form-group">
+            <label>Category
+                <select th:field="${recipe.recipeCategory}">
+                    <option th:each="recipeCategory : ${categories}"
+                            th:value="${recipeCategory.id}"
+                            th:text="${recipeCategory.name}"
+                    ></option>
+                </select>
+                <p class="error" th:errors="${recipe.recipeCategory}"></p>
+            </label>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-success">
+        </div>
+    </form>
+</div>
+<!--add a footer-->
+<div style = "position:relative;">
+    <table style = "margin-top:20px;">
+        <tr>
+            <td style="padding-left:20px;"><a href="/recipe">View Recipes</a></td>
+            <td style="padding-left:20px;"><a href="/recipe/create">Create Recipe</a></td>
+            <td style="padding-left:20px;"><a href="/recipeCategories">View Categories</a></td>
+            <td style="padding-left:20px;"><a href="/recipeCategories/create">Create Categories</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
