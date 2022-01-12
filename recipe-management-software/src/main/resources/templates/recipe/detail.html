@@ -6,10 +6,10 @@
 <!--add a header-->
 <!--<div class="mainPageLogo"><img src = "food_image.jpg"/> </div>-->
 <div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 1500px;position:absolute;">
-    <h1 class="text-center text-danger">Recipe Management Software </h1>
-    <h2 class="text-center text-danger">A one stop for all your favorite recipes.</h2>
+    <h1 class="text-center">Recipe Management Software </h1>
+    <h2 class="text-center">A one stop for all your favorite recipes.</h2>
 
-    <h2 th:text="${title}" class="text-danger text-center"></h2>
+    <h2 th:text="${title}" class="text-center"></h2>
 
     <table class = "table table-bordered">
         <thead>
@@ -20,26 +20,26 @@
         </thead>
         <tbody>
         <tr>
-            <th scope="row" class="text-danger" th:text="${recipe.id}"></th>
-            <td class="text-danger" th:text="${recipe.recipeCategory.name}"></td>
+            <th scope="row" th:text="${recipe.id}"></th>
+            <td th:text="${recipe.recipeCategory.name}"></td>
 </tr>
         <tr>
-        <th scope="row" class="text-danger">Recipe Instructions</th>
+        <th scope="row">Recipe Instructions</th>
         </tr>
 
         <tr>
-        <td class="text-danger" th:text="${recipe.recipeDetails.description}"></td>
+        <td th:text="${recipe.recipeDetails.description}"></td>
         </tr>
         </tbody>
     </table>
-                                    <!--    <p class="text-danger">Recipe ID - </p>-->
-<!--    <p class="text-danger" th:text="${recipe.id}"></p><br>-->
+                                    <!--    <p>Recipe ID - </p>-->
+<!--    <p th:text="${recipe.id}"></p><br>-->
 
-<!--    <p class="text-danger">Recipe Name - </p>-->
-<!--    <p class="text-danger" th:text="${recipe.recipeName}"></p><br>-->
+<!--    <p>Recipe Name - </p>-->
+<!--    <p th:text="${recipe.recipeName}"></p><br>-->
 
-<!--    <p class="text-danger">Recipe Instructions - </p>-->
-<!--    <p class="text-danger" th:text="${recipe.recipeDetails.description}"></p><br>-->
+<!--    <p>Recipe Instructions - </p>-->
+<!--    <p th:text="${recipe.recipeDetails.description}"></p><br>-->
 
     <p class="text-center"><a href="/recipe/">Back to Recipe Page</a></p>
 

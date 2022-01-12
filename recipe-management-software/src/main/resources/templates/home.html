@@ -7,26 +7,32 @@
 <!--add a header-->
 <!--<div class="mainPageLogo"><img src = "food_image.jpg"/> </div>-->
 <div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 500px">
-    <h1 class="text-center text-danger">Recipe Management Software </h1>
-    <h2 class="text-center text-danger">A one stop for all your favorite recipes.</h2>
+    <h1 class="text-center">Recipe Management Software </h1>
+    <h2 class="text-center">A one stop for all your favorite recipes.</h2>
     <!--include an image as background-->
 <!--    <div class="row" style="padding-top:150px;">-->
-<!--        <p class="lead col-xs-6 text-danger text-center">Hello </p> <p th:text="${username}">,</p>-->
-<!--    <p class="text-danger text-center">Hello </p> <p class="text-danger text-center" th:text="${username}">,</p>-->
+<!--        <p class="lead col-xs-6 text-center">Hello </p> <p th:text="${username}">,</p>-->
+<!--    <p class="text-center">Hello </p> <p class="text-center" th:text="${username}">,</p>-->
 
-<!--    <span class="text-danger">Dear</span>-->
-<!--    <p class="text-danger" th:text="${loginFormDTO.username}">,</p>-->
-    <p class="text-danger" th:text="${newusername}">,</p>
-
-    <p class="text-danger text-center">Welcome to our Recipe Management Homepage.Here are the options, </p>
-    <div class="row" style="padding-top:50px;">
-    <p><a class="nav-link  lead col-xs-6 text-danger text-center" href="/recipe/">View</a></p>
-     <p><a class="nav-link lead col-xs-6 text-danger text-center" href="/recipe/create/">Add a Recipe</a></p>
+<!--    <span>Dear</span>-->
+<!--    <p th:text="${loginFormDTO.username}">,</p>-->
+<!--  <b>HELLO <p style="text-transform:uppercase" th:text="${newusername}"></p>,</b>-->
+<h3 style="text-transform:uppercase" th:text="${newusername}"></h3>
+    <b><p class="text-center">Welcome to our Recipe Management Homepage.  Here are the options, </p></b>
+    <div class="row" style="padding-top:20px;">
+<!--        <table>-->
+<!--            <tr>-->
+<!--                <td><a class="nav-link  lead col-xs-6 text-center" href="/recipe/">View</a></td>-->
+<!--                <td><a class="nav-link lead col-xs-6 text-center" href="/recipe/create/">Add a Recipe</a></td>-->
+<!--            </tr>-->
+<!--        </table>-->
+   <a class="nav-link  lead col-xs-6 text-center" href="/recipe/">View</a>
+   <a class="nav-link lead col-xs-6 text-center" href="/recipe/create/">Add a Recipe</a>
         </div>
-<!--          <a class="nav-link lead col-xs-6 text-danger text-center" href="/recipe/delete/">Delete a Recipe</a><br>-->
+<!--          <a class="nav-link lead col-xs-6 text-center" href="/recipe/delete/">Delete a Recipe</a><br>-->
     <div class="row" style="padding-top:50px;">
-        <p><a class="nav-link lead col-xs-6 text-danger text-center" href="/recipeCategories/">View My Recipe Categories</a></p>
-        <p><a class="nav-link lead col-xs-6 text-danger text-center" href="/recipeCategories/create/">Create a Recipe Category</a></p>
+       <a class="nav-link lead col-xs-6 text-center" href="/recipeCategories">View My Recipe Categories</a>
+      <a class="nav-link lead col-xs-6 text-center" href="/recipeCategories/create/">Create a Recipe Category</a>
     </div>
 <!--                <li class="nav-item"><a class="nav-link" href="/tags/">All Tags</a></li>-->
 <!--                <li class="nav-item"><a class="nav-link" href="/tags/create">Create Tag</a></li>-->
