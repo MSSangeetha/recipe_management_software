@@ -5,7 +5,7 @@
 <!--<body class="container">-->
 <!--add a header-->
 <!--<div class="mainPageLogo"><img src = "food_image.jpg"/> </div>-->
-<div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 500px;position:absolute;">
+<div class="homeCenter" style="background-color: #ebebeb; opacity: 0.8; border-style: solid; width:800px; border-color: #ebebeb; height: 800px;position:absolute;">
     <h1 class="text-center">Recipe Management Software </h1>
     <h2 class="text-center">A one stop for all your favorite recipes.</h2>
     <form method="post">
@@ -18,7 +18,7 @@
         <div class="form-group">
 <!--            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>-->
             <label>Instructions</label>
-                <textarea th:field="${recipe.recipeDetails.description}" class="form-control" id="textAreaExample" rows="10"></textarea>
+                <textarea th:field="${recipe.recipeDetails.description}" class="form-control" id="textAreaExample" rows="20"></textarea>
 <!--                <input th:field="${recipe.recipeDetails.description}" class="form-control">-->
 
             <p class="error" th:errors="${recipe.recipeDetails.description}"></p>
@@ -29,7 +29,7 @@
 <!--            </label>-->
 <!--            <p class="error" th:errors="${event.eventDetails.contactEmail}"></p>-->
 <!--        </div>-->
-        <div class="form-group">
+<!--        <div class="form-group">-->
             <label>Category
                 <select th:field="${recipe.recipeCategory}">
                     <option th:each="recipeCategory : ${categories}"
@@ -39,7 +39,7 @@
                 </select>
                 <p class="error" th:errors="${recipe.recipeCategory}"></p>
             </label>
-        </div>
+<!--        </div>-->
         <div class="form-group">
             <input type="submit" value="Create" class="btn btn-success">
         </div>

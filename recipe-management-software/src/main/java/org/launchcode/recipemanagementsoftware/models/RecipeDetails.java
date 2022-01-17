@@ -7,16 +7,14 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class RecipeDetails extends AbstractEntity{
+    @NotBlank(message = "Instruction is required")
     @Size(max = 1500000, message = "Description too long!")
     private String description;
 
-//    @NotBlank(message = "Email is required")
-//    @Email(message = "Invalid email. Try again.")
-//    private String contactEmail;
 
-    public RecipeDetails(String description, String contactEmail) {
+    public RecipeDetails(String description) {
         this.description = description;
-//        this.contactEmail = contactEmail;
+
     }
     public RecipeDetails() {
 
@@ -30,11 +28,5 @@ public class RecipeDetails extends AbstractEntity{
         this.description = description;
     }
 
-//    public String getContactEmail() {
-//        return contactEmail;
-//    }
-//
-//    public void setContactEmail(String contactEmail) {
-//        this.contactEmail = contactEmail;
-//    }
+
 }
