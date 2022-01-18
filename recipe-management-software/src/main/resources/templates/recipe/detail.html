@@ -9,7 +9,7 @@
     <h1 class="text-center">Recipe Management Software </h1>
     <h2 class="text-center">A one stop for all your favorite recipes.</h2>
 
-    <h2 th:text="${title}" class="text-center"></h2>
+    <h2 th:text="${title}" style="color:#0000FF" class="text-center"></h2>
 
     <table class = "table table-bordered">
         <thead>
@@ -24,10 +24,18 @@
             <td th:text="${recipe.recipeCategory.name}"></td>
 </tr>
         <tr>
-        <th scope="row">Recipe Instructions</th>
+        <th scope="row">Ingredients</th>
         </tr>
 
         <tr>
+                <td th:text="${recipe.recipeDetails.ingredients}"></td>
+        </tr>
+        <tr>
+            <th scope="row">Instructions</th>
+        </tr>
+
+        <tr>
+
         <td th:text="${recipe.recipeDetails.description}"></td>
         </tr>
         </tbody>

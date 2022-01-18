@@ -90,7 +90,7 @@ public class RecipeController {
             model.addAttribute("title", "Invalid Recipe Id : " + recipeId);
         }else{
             Recipe recipe = result.get();
-            model.addAttribute("title", recipe.getRecipeName() + " Details");
+            model.addAttribute("title", recipe.getRecipeName());
             model.addAttribute("recipe", recipe);
 
 //            model.addAttribute("tags",event.getTags());
